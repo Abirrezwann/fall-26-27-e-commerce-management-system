@@ -1,96 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronics | Phoenix Shop</title>
-    <link rel="stylesheet" href="../css/category.css">
 </head>
+<body>
 
-<body class="electronics">
-
-    <header class="header">
-        <a href="../index.html"><img src="../image/logo.jpg" alt="Phoenix Shop" class="logo"></a>
-        <form class="search" action="search-results.html" method="get">
+    <!-- Header -->
+    <header>
+        <a href="../index.html">
+            <img src="../image/logo.jpg" alt="Phoenix Shop" width="80" height="80">
+        </a>
+        <form action="search-results.html" method="get">
             <input type="text" name="q" placeholder="Search electronics...">
             <button type="submit">Search</button>
         </form>
-        <nav class="menu">
-            <a href="login.html">Sign In</a>
+        <nav>
+            <a href="login.html">Sign In</a> |
             <a href="cart.html">Cart (0)</a>
         </nav>
     </header>
 
-    <section class="banner">
+    <hr>
+
+    <!-- Banner -->
+    <section>
         <h1>Electronics</h1>
-        <p>Phones, laptops, headphones and more at the best price.</p>
+        <p>Phones, laptops, graphics cards, monitors and more.</p>
     </section>
 
-    <section class="section">
+    <!-- Categories -->
+    <section>
         <h2>Shop by Category</h2>
-        <div class="categories">
-            <a href="#">Mobile Phones</a>
-            <a href="#">Laptops</a>
-            <a href="#">Headphones</a>
-            <a href="#">Smart Watches</a>
-            <a href="#">Televisions</a>
-            <a href="#">Accessories</a>
-        </div>
+        <ul>
+            <li><a href="#">Phones</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Graphics Cards</a></li>
+            <li><a href="#">Monitors</a></li>
+            <li><a href="#">Speakers</a></li>
+            <li><a href="#">Mouse &amp; Keyboard</a></li>
+        </ul>
     </section>
 
-    <section class="section">
+    <!-- Products -->
+    <section>
         <h2>Popular Products</h2>
-        <div class="products">
-            <div class="card">
-                <img src="https://placehold.co/300x300?text=Phone" alt="Samsung Galaxy A56">
-                <h3>Samsung Galaxy A56</h3>
-                <p class="price">৳42,999</p>
-                <a href="product-details.html" class="btn">View Details</a>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x300?text=Laptop" alt="HP 15 Laptop">
-                <h3>HP 15 Laptop i5</h3>
-                <p class="price">৳78,999</p>
-                <a href="product-details.html" class="btn">View Details</a>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x300?text=Headphone" alt="Sony Headphone">
-                <h3>Sony Wireless Headphone</h3>
-                <p class="price">৳12,500</p>
-                <a href="product-details.html" class="btn">View Details</a>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x300?text=Watch" alt="Smart Watch">
-                <h3>Xiaomi Smart Band 9</h3>
-                <p class="price">৳4,290</p>
-                <a href="product-details.html" class="btn">View Details</a>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x300?text=Charger" alt="Fast Charger">
-                <h3>Anker 65W Fast Charger</h3>
-                <p class="price">৳4,450</p>
-                <a href="product-details.html" class="btn">View Details</a>
-            </div>
-            <div class="card">
-                <img src="https://placehold.co/300x300?text=Speaker" alt="Bluetooth Speaker">
-                <h3>JBL Bluetooth Speaker</h3>
-                <p class="price">৳8,990</p>
-                <a href="product-details.html" class="btn">View Details</a>
-            </div>
-        </div>
+        <table cellpadding="10">
+            <tr>
+                <td>
+                    <img src="../image/iphone-17-pro.jpg" alt="Apple iPhone 17 Pro 256GB" width="200" height="200">
+                    <h3>Apple iPhone 17 Pro 256GB</h3>
+                    <p>Price: ৳169,999</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+                <td>
+                    <img src="../image/macbook-air-m4.jpg" alt="Apple MacBook Air M4 13 inch" width="200" height="200">
+                    <h3>Apple MacBook Air M4 13 inch</h3>
+                    <p>Price: ৳154,999</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+                <td>
+                    <img src="../image/airpods-pro-3.jpg" alt="Apple AirPods Pro 3" width="200" height="200">
+                    <h3>Apple AirPods Pro 3</h3>
+                    <p>Price: ৳32,500</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+                <td>
+                    <img src="../image/galaxy-s26-ultra.jpg" alt="Samsung Galaxy S26 Ultra" width="200" height="200">
+                    <h3>Samsung Galaxy S26 Ultra</h3>
+                    <p>Price: ৳189,999</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="../image/galaxy-s26.jpg" alt="Samsung Galaxy S26 256GB" width="200" height="200">
+                    <h3>Samsung Galaxy S26 256GB</h3>
+                    <p>Price: ৳109,999</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+                <td>
+                    <img src="../image/rtx-5070.jpg" alt="NVIDIA GeForce RTX 5070 12GB" width="200" height="200">
+                    <h3>NVIDIA GeForce RTX 5070 12GB</h3>
+                    <p>Price: ৳72,000</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+                <td>
+                    <img src="../image/rtx-5060-ti.jpg" alt="NVIDIA GeForce RTX 5060 Ti 16GB" width="200" height="200">
+                    <h3>NVIDIA GeForce RTX 5060 Ti 16GB</h3>
+                    <p>Price: ৳58,500</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+                <td>
+                    <img src="../image/koorui-monitor.jpg" alt="KOORUI 27 inch 2K 165Hz Monitor" width="200" height="200">
+                    <h3>KOORUI 27 inch 2K 165Hz Monitor</h3>
+                    <p>Price: ৳24,500</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="../image/msi-monitor.jpg" alt="MSI MAG 27 inch 180Hz Monitor" width="200" height="200">
+                    <h3>MSI MAG 27 inch 180Hz Monitor</h3>
+                    <p>Price: ৳39,900</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+                <td>
+                    <img src="../image/fd-speaker.jpg" alt="F&amp;D F550X 2.1 Speaker" width="200" height="200">
+                    <h3>F&amp;D F550X 2.1 Speaker</h3>
+                    <p>Price: ৳8,500</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+                <td>
+                    <img src="../image/dragonfly-f1s-mouse.jpg" alt="Dragonfly F1S Wireless Mouse" width="200" height="200">
+                    <h3>Dragonfly F1S Wireless Mouse</h3>
+                    <p>Price: ৳3,200</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+                <td>
+                    <img src="../image/weikav-keyboard.jpg" alt="WEIKAV Lucky65 Keyboard" width="200" height="200">
+                    <h3>WEIKAV Lucky65 Keyboard</h3>
+                    <p>Price: ৳6,500</p>
+                    <a href="product-details.html">View Details</a>
+                </td>
+            </tr>
+        </table>
     </section>
 
-    <footer class="footer">
+    <hr>
+
+    <!-- Footer -->
+    <footer>
         <nav>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="terms.html">Terms</a>
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="terms.html">Terms</a> |
             <a href="privacy.html">Privacy</a>
         </nav>
         <p>&copy; 2026 Phoenix Shop. All rights reserved.</p>
     </footer>
 
 </body>
-
 </html>
