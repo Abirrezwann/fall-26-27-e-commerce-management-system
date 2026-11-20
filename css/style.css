@@ -1,4 +1,3 @@
-/* login*/
 .header {
     display: flex;
     justify-content: space-between;
@@ -7,7 +6,6 @@
     background-color: #1B1F3B;
     color: white;
 }
-
 
 .header .logo {
     font-size: 28px;
@@ -29,13 +27,14 @@
     border-radius: 5px;
 }
 
-
 nav {
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 15px;
     background-color: #663399;
+}
+
 body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -68,12 +67,10 @@ nav a:hover {
     color: #FFD700;
 }
 
-
 .auth-box {
     max-width: 750px;
     margin: 40px auto;
 }
-
 
 .auth-box .card:first-child {
     background-color: white;
@@ -83,19 +80,16 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
-
 h2 {
     color: #1B1F3B;
     font-size: 2rem;
     margin-bottom: 15px;
 }
 
-
 .auth-box .card:first-child>p {
     color: #555555;
     margin-bottom: 20px;
 }
-
 
 fieldset {
     border: 1px solid #cccccc;
@@ -108,7 +102,6 @@ legend {
     font-weight: bold;
     font-size: 1.1rem;
 }
-
 
 table {
     width: 100%;
@@ -126,7 +119,6 @@ input[type="password"] {
     border-radius: 5px;
     font-size: 1rem;
 }
-
 
 input[type="submit"] {
     background-color: #663399;
@@ -147,14 +139,12 @@ a {
     cursor: pointer;
 }
 
-
 .auth-box .card:last-child {
     background-color: #F5F3FA;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-
 
 h3 {
     color: #1B1F3B;
@@ -165,7 +155,6 @@ h3 {
     padding: 8px;
     border-bottom: 1px solid #dddddd;
 }
-
 
 button {
     background-color: #663399;
@@ -193,13 +182,6 @@ button:hover {
     color: #666666;
     margin-bottom: 20px;
 }
-
-
-
-
-/*all*/
-
-
 
 * {
     margin: 0;
@@ -229,8 +211,6 @@ a {
 a:hover {
     color: #8E6CC8;
 }
-
-
 
 .header {
     background-color: #1B1F3B;
@@ -265,9 +245,6 @@ a:hover {
     gap: 12px;
     font-size: 0.95rem;
 }
-
-
-
 
 .topnav {
     position: sticky;
@@ -306,10 +283,6 @@ a:hover {
     background-color: #3D4270;
     color: white;
 }
-
-
-/* ================================
-   4. COMMON LAYOUT
 
 .container {
     max-width: 1200px;
@@ -352,9 +325,6 @@ a:hover {
     font-size: 0.85rem;
     color: #777777;
 }
-
-
-
 
 .btn {
     display: inline-block;
@@ -429,9 +399,6 @@ a:hover {
     font-size: 1rem;
 }
 
-
-
-
 fieldset {
     border: 1px solid #D8D0E8;
     border-radius: 8px;
@@ -485,9 +452,6 @@ input[type="checkbox"] {
     accent-color: #663399;
 }
 
-
-
-
 .table-wrapper {
     overflow-x: auto;
 }
@@ -518,9 +482,6 @@ input[type="checkbox"] {
 .data-table tbody tr:hover {
     background-color: #F0EAFA;
 }
-
-
-
 
 .badge {
     display: inline-block;
@@ -553,9 +514,6 @@ input[type="checkbox"] {
     background-color: #6C757D;
 }
 
-
-
-
 .footer {
     background-color: #1B1F3B;
     color: #BBB6CC;
@@ -565,10 +523,6 @@ input[type="checkbox"] {
     font-size: 0.88rem;
 }
 
-/*electronic,fashion,homa&living
-
-
-/* Product container */
 .product-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -576,21 +530,18 @@ input[type="checkbox"] {
     min-height: 75vh;
 }
 
-/* Product heading */
 .product-title {
     text-align: center;
     font-size: 1.6rem;
     margin-bottom: 24px;
 }
 
-/* Product Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(1fr));
     gap: 20px;
 }
 
-/* Individual Product Card */
 .product-card {
     background-color: white;
     border-radius: 12px;
@@ -600,13 +551,11 @@ input[type="checkbox"] {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Card Hover */
 .product-card:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Product Image */
 .product-card img {
     width: 100%;
     height: 180px;
@@ -615,7 +564,6 @@ input[type="checkbox"] {
     margin-bottom: 12px;
 }
 
-/* Product Name */
 .product-card p {
     font-size: 0.95rem;
     font-weight: 600;
@@ -624,19 +572,16 @@ input[type="checkbox"] {
     min-height: 65px;
 }
 
-/* Product Link */
 .product-card a {
     text-decoration: none;
 }
 
-/* Product Price */
 .product-card h2 {
     font-size: 1.2rem;
     color: #663399;
     margin-bottom: 14px;
 }
 
-/* Add to Card Button */
 .product-card .btn {
     display: inline-block;
     background-color: #2E7D32;
@@ -653,8 +598,6 @@ input[type="checkbox"] {
 .product-card .btn:hover {
     background-color: #43A047;
     color: white;
-}
-    padding: 10px;
 }
 
 nav a:hover {
@@ -877,4 +820,272 @@ legend {
 .red {
     color: red;
     font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.product-container,
+.container,
+.content,
+.auth-box,
+.form-box,
+section {
+    flex: 1 0 auto;
+}
+
+footer,
+.footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    background-color: #1B1F3B;
+    color: #BBB6CC;
+    text-align: center;
+    padding: 20px;
+}
+
+header,
+.header,
+nav,
+.topnav {
+    background-color: rgba(20, 50, 40, 0.95);
+    color: white;
+}
+
+header,
+.header {
+    padding: 15px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+header h1,
+.header .logo {
+    white-space: nowrap;
+    color: #82f0c28a;
+}
+
+.headerPart1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1 1 auto;
+
+}
+
+.headerPart1 p {
+    display: flex;
+    justify-content: flex-start;
+    color: #7cafa8;
+}
+
+.headerPart1 form {
+    flex: 1;
+    margin: 0;
+}
+
+.headerPart1 table,
+.headerPart1 tr,
+.headerPart1 td {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.headerPart1 input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    padding: 8px 12px;
+}
+
+.headerPart1 button {
+    border-radius: 0 4px 4px 0;
+    background-color: #2E7D32;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+.headerPart1 button:hover {
+    background-color: #43A047;
+}
+
+.headerPart2 nav ul,
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: transparent;
+    padding: 0;
+}
+
+.headerPart2 nav a,
+.headerPart2 nav li,
+header nav a {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.headerPart2 nav a:hover,
+.headerPart2 nav li:hover,
+header nav a:hover {
+    background: transparent;
+    color: #81C784;
+    text-decoration: underline;
+}
+
+.topnav {
+    padding: 0 24px;
+    justify-content: center;
+}
+
+.topnav a {
+    color: white;
+    font-size: 0.85rem;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.topnav a:hover,
+.topnav a.active {
+    background-color: transparent;
+    border-bottom: 3px solid #81C784;
+    color: white;
+}
+
+.user-info a {
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.user-info a:hover {
+    background: transparent;
+    color: #81C784;
+    text-decoration: underline;
+}
+
+#categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 16px;
+    width: 100%;
+}
+
+#categories h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.categoriesClass {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+a.category {
+    display: block;
+    width: 240px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #1B1F3B;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+a.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+a.category img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+a.category p {
+    font-weight: bold;
+    color: #1B1F3B;
+    font-size: 1.1rem;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.product-container>br {
+    display: none;
+}
+
+.product-container>h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-container .product-card {
+    width: 230px;
+    margin: 0;
+}
+
+#personalizedRecommendation {
+    text-align: center;
+    padding: 60px 16px;
+    width: 100%;
+}
+
+#personalizedRecommendation h2 {
+    margin-bottom: 20px;
+}
+
+#personalizedRecommendation h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#backtotop {
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+#sportLogoText {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 20px 5px 2px;
+    margin: 5px 560px 5px 2px;
+    border: 2px none black;
+}
+
+a {
+    text-decoration: none;
 }
