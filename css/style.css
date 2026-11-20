@@ -1078,11 +1078,11 @@ a.category p {
     width: 100%;
 }
 
-#sportLogoText {
+#LogoText {
     display: flex;
-    justify-content: flex-start;
-    padding: 5px 20px 5px 2px;
-    margin: 5px 560px 5px 2px;
+    justify-content: space-between;
+    /*padding: 5px 20px 5px 2px;*/
+    /*margin: 5px 560px 5px 2px;*/
     border: 2px none black;
 }
 

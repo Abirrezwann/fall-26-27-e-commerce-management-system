@@ -9,8 +9,16 @@
 </head>
 
 <body>
-    <header>
+    <header class="header" id="Top">
         <img src="image/logo.jpg" alt="Phoenix Shop" width="60" height="60">
+        <h1 id="Top">PHOENIX SHOP</h1>
+        <div class="headerPart1">
+            <form method="POST">
+                <input type="text" placeholder="search products...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="user-info" id="userInfo"></div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,8 +29,6 @@
                 <li><a href="sports.html">Sports</a></li>
                 <li><a href="seller.html">Sell on Phoenix</a></li>
                 <li><a href="cart.html">Cart</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html" class="active">Sign Up</a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +37,7 @@
         <h2>Create your account</h2>
         <p>Fields marked <span style="color:red">*</span> are required.</p>
 
-        <form action="login.html" method="get">
+        <form action="login.html" method="POST" onsubmit="return validateSignupForm()">
             <fieldset>
                 <legend>Account Type</legend>
                 <input type="radio" id="customer" name="userType" value="Customer" checked>
