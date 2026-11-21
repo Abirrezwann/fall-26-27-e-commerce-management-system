@@ -19,6 +19,97 @@ function readUsers() {
     return users;
 }
 
+if (document.getElementById("username") !== null) {
+    let demoRows = document.querySelectorAll(".demo-accounts tr");
+    for (let i = 0; i < demoRows.length; i++) {
+        let useButton = demoRows[i].querySelector("button");
+        useButton.addEventListener("click", function () {
+            document.getElementById("username").value = demoRows[i].cells[0].innerHTML.trim();
+            document.getElementById("password").value = demoRows[i].cells[1].innerHTML.trim();
+        });
+    }
+
+    document.getElementById("showPassword").addEventListener("change", function () {
+        if (document.getElementById("showPassword").checked) {
+            document.getElementById("password").type = "text";
+        } else {
+            document.getElementById("password").type = "password";
+        }
+    });
+
+    document.querySelector(".auth-box input[type='submit']").addEventListener("click", function () {
+        document.getElementById("usernameError").innerHTML = "";
+        document.getElementById("passwordError").innerHTML = "";
+        document.getElementById("loginMessage").innerHTML = "";
+
+        let username = document.getElementById("username").value.trim();
+        let password = document.getElementById("password").value;
+        let ok = true;
+
+        if (username === "") {
+            document.getElementById("usernameError").innerHTML = "Username or email is required";
+            ok = false;
+        }
+        if (password === "") {
+            document.getElementById("passwordError").innerHTML = "Password is required";
+            ok = false;
+        }
+        if (!ok) return;
+
+        let accountName = "";
+        let accountType = "";
+        let rows = document.querySelectorAll(".demo-accounts tr");
+        for (let i = 0; i < rows.length; i++) {
+            let demoName = rows[i].cells[0].innerHTML.trim();
+            let demoPass = rows[i].cells[1].innerHTML.trim();
+            if (username === demoName && password === demoPass) {
+                accountName = demoName;
+                accountType = demoName;
+            }
+        }
+        if (accountName === "") {
+            let users = readUsers();
+            for (let i = 0; i < users.length; i++) {
+                if ((username === users[i].email || username === users[i].name) &&
+                    password === users[i].password) {
+                    accountName = users[i].name;
+                    accountType = users[i].type;
+                }
+            }
+        }
+
+        if (accountName === "") {
+            document.getElementById("loginMessage").innerHTML = "Wrong username or password.";
+            return;
+        }
+
+        localStorage.setItem("loggedInUser", accountName);
+        localStorage.setItem("loggedInType", accountType);
+        document.getElementById("loginMessage").innerHTML =
+            "Login successful. Welcome " + accountName + "! You can now continue shopping.";
+    });
+}
+function readUsers() {
+    let users = [];
+    let count = localStorage.getItem("userCount");
+    if (count === null) return users;
+    count = Number(count);
+    for (let i = 0; i < count; i++) {
+        let user = {
+            name: localStorage.getItem("user" + i + "_name"),
+            email: localStorage.getItem("user" + i + "_email"),
+            phone: localStorage.getItem("user" + i + "_phone"),
+            gender: localStorage.getItem("user" + i + "_gender"),
+            city: localStorage.getItem("user" + i + "_city"),
+            address: localStorage.getItem("user" + i + "_address"),
+            password: localStorage.getItem("user" + i + "_password"),
+            type: localStorage.getItem("user" + i + "_type")
+        };
+        users.push(user);
+    }
+    return users;
+}
+
 function saveUsers(users) {
     localStorage.setItem("userCount", users.length);
     for (let i = 0; i < users.length; i++) {
