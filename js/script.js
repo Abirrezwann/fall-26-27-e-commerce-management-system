@@ -84,15 +84,17 @@ if (document.getElementById("username") !== null) {
         }
         localStorage.setItem("loggedInUser", accountName);
         localStorage.setItem("loggedInType", accountType);
-        document.getElementById("loginMessage").innerHTML =
-            "Login successful. Welcome " + accountName + "! You can now continue shopping.";
+        document.getElementById("loginMessage").innerHTML = "<span style='color:red'>" +
+            "Login successful. Welcome " + accountName + "! </span>";
         setTimeout(function () {
             if (accountType === "Seller") {
                 window.location.href = "seller.html";
+            } else if (accountType === "Admin") {
+                window.location.href = "admin.html";
             } else {
                 window.location.href = "index.html";
             }
-        }, 800);
+        }, 2000);
     });
 }
 function readUsers() {
