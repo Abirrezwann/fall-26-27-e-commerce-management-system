@@ -1,40 +1,3 @@
-if (document.getElementById("selectedPaymentMethod") !== null) {
-
-    document.querySelector('#BkashForm input[name="bkashOTP"]').id = "bkashOTP";
-
-    let forms = ["visaForm", "mastercardForm", "BkashForm", "NagadForm"];
-    let radios = document.querySelectorAll('input[name="payment"]');
-    let config = [
-        ["visaForm", ["visaCardName", "visaCardNumber", "VexpiryDate", "Vcvv"]],
-        ["mastercardForm", ["MCardName", "McardNumber", "MexpiryDate", "Mcvv"]],
-        ["BkashForm", ["BphNumber", "bkashOTP", "bkashPass"]],
-        ["NagadForm", ["NphNumber", "nagadOTP", "nagadPass"]]
-    ];
-
-    function show(id) {
-        for (let i = 0; i < forms.length; i++)
-            document.getElementById(forms[i]).style.display = forms[i] === id ? "block" : "none";
-    }
-    show("");
-
-    for (let i = 0; i < radios.length; i++)
-        radios[i].addEventListener("change", function () { show(radios[i].value + "Form"); });
-
-    for (let i = 0; i < config.length; i++) {
-        let formId = config[i][0], fields = config[i][1];
-        document.querySelector("#" + formId + " form").addEventListener("submit", function (e) {
-            e.preventDefault();
-            for (let j = 0; j < fields.length; j++) {
-                if (document.getElementById(fields[j]).value.trim() === "") {
-                    alert("Please fill all fields");
-                    return;
-                }
-            }
-            alert("Payment successful");
-            this.reset();
-        });
-    }
-}
 function readUsers() {
     let users = [];
     let count = localStorage.getItem("userCount");
@@ -210,4 +173,146 @@ function addToCart(name, price) {
     }
 
     saveCart(cart);
+}
+
+let productCards = document.querySelectorAll(".product-card");
+for (let i = 0; i < productCards.length; i++) {
+    let card = productCards[i];
+    let addButton = card.querySelector("button");
+    if (addButton === null) continue;
+
+    addButton.addEventListener("click", function () {
+        let name = card.querySelector("p").innerHTML.trim();
+        let priceText = card.querySelector("h2").innerHTML;
+        let price = Number(priceText.replace(/[^0-9.]/g, ""));
+
+        addToCart(name, price);
+        addButton.innerHTML = "Added ✓";
+    });
+}
+
+function showCart() {
+    let cart = readCart();
+    let box = document.getElementById("cartItems");
+    let total = 0;
+    let html = "";
+
+    for (let i = 0; i < cart.length; i++) {
+        total = total + cart[i].price * cart[i].qty;
+
+        html += '<p class="productNames">' + cart[i].name + "</p>";
+        html += '<p class="productPrice">$' + cart[i].price + " x " + cart[i].qty +
+            " = $" + (cart[i].price * cart[i].qty) + "</p>";
+        html += '<button class="btnPlus">+</button> ';
+        html += '<button class="btnMinus">-</button>';
+    }
+
+    if (cart.length === 0) {
+        html = "<p>Your cart is empty.</p>";
+    }
+
+    box.innerHTML = html;
+    document.getElementById("cartTotal").innerHTML = "$" + total;
+
+    let plusButtons = box.querySelectorAll(".btnPlus");
+    for (let i = 0; i < plusButtons.length; i++) {
+        plusButtons[i].addEventListener("click", function () {
+            let cart2 = readCart();
+            cart2[i].qty = cart2[i].qty + 1;
+            saveCart(cart2);
+            showCart();
+        });
+    }
+
+    let minusButtons = box.querySelectorAll(".btnMinus");
+    for (let i = 0; i < minusButtons.length; i++) {
+        minusButtons[i].addEventListener("click", function () {
+            let cart2 = readCart();
+            cart2[i].qty = cart2[i].qty - 1;
+
+            if (cart2[i].qty === 0) {
+                cart2.splice(i, 1);
+            }
+
+            saveCart(cart2);
+            showCart();
+        });
+    }
+}
+
+if (document.getElementById("cartItems") !== null) {
+    showCart();
+}
+
+function updateUserInfo() {
+    let box = document.getElementById("userInfo");
+    if (box === null) return;
+
+    let loggedUser = localStorage.getItem("loggedInUser");
+
+    if (loggedUser === null) {
+        box.innerHTML =
+            '<a href="login.html" class="btn btn-small btn-light">Login</a>' +
+            '<a href="signup.html" class="btn btn-small">Sign Up</a>';
+    } else {
+        box.innerHTML =
+            '<span style="color:white; font-weight:bold;">Hi, ' + loggedUser + '</span>' +
+            '<button type="button" class="btn btn-small btn-danger" id="btnLogout">Logout</button>';
+
+        document.getElementById("btnLogout").addEventListener("click", function () {
+            localStorage.removeItem("loggedInUser");
+            localStorage.removeItem("loggedInType");
+            updateUserInfo();
+        });
+    }
+}
+
+updateUserInfo();
+
+if (document.getElementById("selectedPaymentMethod") !== null) {
+
+    document.querySelector('#BkashForm input[name="bkashOTP"]').id = "bkashOTP";
+
+    let allForms = ["visaForm", "mastercardForm", "BkashForm", "NagadForm"];
+    let paymentRadios = document.querySelectorAll('input[name="payment"]');
+
+    function showForm(formId) {
+        for (let i = 0; i < allForms.length; i++) {
+            if (allForms[i] === formId) {
+                document.getElementById(allForms[i]).style.display = "block";
+            } else {
+                document.getElementById(allForms[i]).style.display = "none";
+            }
+        }
+    }
+
+    showForm("");
+
+    for (let i = 0; i < paymentRadios.length; i++) {
+        paymentRadios[i].addEventListener("change", function () {
+            showForm(this.value + "Form");
+        });
+    }
+
+    for (let i = 0; i < allForms.length; i++) {
+        let currentForm = document.querySelector("#" + allForms[i] + " form");
+        if (currentForm === null) {
+            continue;
+        }
+
+        currentForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let fields = this.querySelectorAll("input[required]");
+            for (let j = 0; j < fields.length; j++) {
+                if (fields[j].value.trim() === "") {
+                    alert("Please fill all fields");
+                    return;
+                }
+            }
+
+            alert("Payment successful");
+            this.reset();
+        });
+    }
 }
