@@ -1,30 +1,5 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #1B1F3B;
-    color: white;
-}
-
 .header .logo {
     font-size: 28px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-}
-
-.user-info {
-    display: flex;
-    gap: 15px;
-}
-
-.user-info a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    background-color: #663399;
-    border-radius: 5px;
 }
 
 nav {
@@ -32,20 +7,6 @@ nav {
     justify-content: center;
     gap: 30px;
     padding: 15px;
-    background-color: #663399;
-}
-
-body {
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F5F5F5;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    background-color: #1C1C1C;
-    padding: 10px 20px;
 }
 
 header img {
@@ -63,10 +24,6 @@ nav a {
     font-size: 1rem;
 }
 
-nav a:hover {
-    color: #FFD700;
-}
-
 .auth-box {
     max-width: 750px;
     margin: 40px auto;
@@ -81,7 +38,6 @@ nav a:hover {
 }
 
 h2 {
-    color: #1B1F3B;
     font-size: 2rem;
     margin-bottom: 15px;
 }
@@ -91,18 +47,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-fieldset {
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-legend {
-    color: #663399;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -110,14 +54,6 @@ table {
 
 td {
     padding: 8px;
-}
-
-input[type="text"],
-input[type="password"] {
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font-size: 1rem;
 }
 
 input[type="submit"] {
@@ -131,14 +67,6 @@ input[type="submit"] {
     font-size: 1rem;
 }
 
-input[type="submit"]:hover {
-    background-color: #1B1F3B;
-}
-
-a {
-    cursor: pointer;
-}
-
 .auth-box .card:last-child {
     background-color: #F5F3FA;
     padding: 25px;
@@ -147,7 +75,6 @@ a {
 }
 
 h3 {
-    color: #1B1F3B;
     margin-bottom: 15px;
 }
 
@@ -163,10 +90,6 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #1B1F3B;
 }
 
 .page-section {
@@ -189,14 +112,6 @@ button:hover {
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333333;
-    background-color: #F4F2F8;
-}
-
 h1,
 h2,
 h3 {
@@ -204,23 +119,8 @@ h3 {
     color: #1B1F3B;
 }
 
-a {
-    color: #663399;
-}
-
 a:hover {
     color: #8E6CC8;
-}
-
-.header {
-    background-color: #1B1F3B;
-    color: white;
-    padding: 14px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
 }
 
 .logo {
@@ -246,16 +146,6 @@ a:hover {
     font-size: 0.95rem;
 }
 
-.topnav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: #2B2F55;
-    padding: 0 16px;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
 .topnav a,
 .topnav button {
     display: inline-block;
@@ -271,24 +161,15 @@ a:hover {
     transition: background-color 0.3s;
 }
 
-.topnav a:hover,
 .topnav button:hover {
     background-color: #3D4270;
     color: white;
 }
 
-.topnav a.active,
 .topnav button.active {
     border-bottom: 3px solid #C9A7F5;
     background-color: #3D4270;
     color: white;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px 16px;
-    min-height: 75vh;
 }
 
 .card {
@@ -327,21 +208,10 @@ a:hover {
 }
 
 .btn {
-    display: inline-block;
-    background-color: rgb(136, 0, 255);
-    color: white;
-    border: none;
-    padding: 9px 20px;
-    border-radius: 6px;
-    font-family: inherit;
     font-size: 0.95rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #8E6CC8;
     color: white;
 }
 
@@ -399,33 +269,13 @@ a:hover {
     font-size: 1rem;
 }
 
-fieldset {
-    border: 1px solid #D8D0E8;
-    border-radius: 8px;
-    padding: 12px 16px 16px 16px;
-    margin-bottom: 16px;
-}
-
-legend {
-    font-weight: bold;
-    color: #663399;
-    padding: 0 8px;
-}
-
 label {
     font-weight: 600;
     color: #444444;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
 input[type="date"],
-input[type="time"],
-input[type="tel"],
-select,
-textarea {
+input[type="time"] {
     width: 100%;
     padding: 8px 10px;
     border: 1px solid #C8C3D4;
@@ -515,19 +365,7 @@ input[type="checkbox"] {
 }
 
 .footer {
-    background-color: #1B1F3B;
-    color: #BBB6CC;
-    text-align: center;
-    padding: 16px;
-    margin-top: 30px;
     font-size: 0.88rem;
-}
-
-.product-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px 16px;
-    min-height: 75vh;
 }
 
 .product-title {
@@ -538,7 +376,7 @@ input[type="checkbox"] {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -612,24 +450,18 @@ section {
     padding: 0px 30px;
 }
 
-footer {
-    background-color: #1C1C1C;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 30px;
-}
-
 footer a {
     color: #F5A623;
 }
 
 .btn {
+    display: inline-block;
     background-color: #E8501F;
     color: white;
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
+    font-family: inherit;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.5s;
@@ -654,6 +486,9 @@ textarea {
     padding: 8px;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: white;
 }
 
 .banner {
@@ -690,6 +525,10 @@ textarea {
 }
 
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    min-height: 75vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -750,12 +589,15 @@ textarea {
 fieldset {
     border: 1px solid #CCCCCC;
     border-radius: 8px;
+    padding: 12px 16px 16px 16px;
     margin-bottom: 15px;
 }
 
 legend {
     color: #E8501F;
     font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 8px;
 }
 
 .content {
@@ -823,6 +665,12 @@ legend {
 }
 
 body {
+    margin: 0px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #F4F2F8;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -949,6 +797,11 @@ header nav a:hover {
 }
 
 .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    overflow-x: auto;
+    white-space: nowrap;
     padding: 0 24px;
     justify-content: center;
 }
@@ -970,6 +823,8 @@ header nav a:hover {
 .user-info a {
     background: transparent;
     color: white;
+    text-decoration: none;
+    border-radius: 5px;
     font-weight: bold;
     padding: 5px 10px;
     text-transform: uppercase;
@@ -1035,6 +890,10 @@ a.category p {
 }
 
 .product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    min-height: 75vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1087,5 +946,19 @@ a.category p {
 }
 
 a {
+    cursor: pointer;
+    color: #663399;
     text-decoration: none;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+    background-color: #4bbe28 !important;
+}
+
+button:active,
+.btn:active,
+input[type="submit"]:active {
+    background-color: #0828df !important;
 }
