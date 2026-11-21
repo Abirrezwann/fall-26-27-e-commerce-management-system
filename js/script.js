@@ -82,11 +82,17 @@ if (document.getElementById("username") !== null) {
             document.getElementById("loginMessage").innerHTML = "Wrong username or password.";
             return;
         }
-
         localStorage.setItem("loggedInUser", accountName);
         localStorage.setItem("loggedInType", accountType);
         document.getElementById("loginMessage").innerHTML =
             "Login successful. Welcome " + accountName + "! You can now continue shopping.";
+        setTimeout(function () {
+            if (accountType === "Seller") {
+                window.location.href = "seller.html";
+            } else {
+                window.location.href = "index.html";
+            }
+        }, 800);
     });
 }
 function readUsers() {
